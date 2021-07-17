@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import axios from 'axios';
 
 import ProductComponent from './ProductComponent';
-import { useSelector , useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import setProducts from "../redux/actions/productActions";
 
 function ProductListing() {
@@ -21,7 +21,7 @@ function ProductListing() {
 
     useEffect(() => {
         fetchAllProducts();
-    }, [])
+    })
 
     return (
         <div >
