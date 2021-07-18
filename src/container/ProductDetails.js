@@ -20,13 +20,14 @@ const useStyles = makeStyles((theme) => ({
 
 
 const ProductDetails = () => {
+    const {productId}=useParams();
     const [loader,setLoader] = useState(false);
     const classes = useStyles();
 
-    const {productId}=useParams();
+    
     const {id,image,title,price,description,category} = useSelector((state) => state.product)
     const dispatch = useDispatch();
-    const fetchProducts=async()=>{
+    const fetchProducts=async(productId)=>{
         const response= await axios
         .get(`https://fakestoreapi.com/products/${productId}`)
         .catch((e)=>{ 
@@ -36,11 +37,9 @@ const ProductDetails = () => {
         dispatch(selectedProduct(response.data));
        setLoader(true);
     }
-
-    useEffect(() => {
-            fetchProducts();
-        
-    },[productId]);
+    useEffect((productId) => {
+        fetchProducts(productId);
+    });
 
     return (
         <div className="product_details">

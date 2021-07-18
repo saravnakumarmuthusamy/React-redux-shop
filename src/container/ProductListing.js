@@ -35,9 +35,7 @@ function ProductListing() {
     useEffect(
         () => {
         fetchAllProducts() 
-    }
-    ,[]
-    );
+    });
 
     return (
         <div className="productListing">
