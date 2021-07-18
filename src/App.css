@@ -1,7 +1,146 @@
-html, body {
-  height: 100%;
+#root{
+  width: 100%;
 }
 
-.ui.grid {
-  height: 100%;    
+.header{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(83, 38, 141);
+  color: white;
+  height: 60px;
+  align-items: center;
 }
+
+
+
+.titleName{
+  text-align: center;
+  padding: 10px;
+}
+.ProductComponentList{
+  width: 100%;
+}
+.productListing{
+  margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.productCol{
+  width: 25%;
+  margin-top: 10px;
+}
+
+.product_img{
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.product_card {
+  /* height: 200px; */
+    border: 2px solid #f3f2f5;
+    padding: 10px;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prodct_title{
+  border-bottom: 1px solid #f3f2f5;
+
+}
+
+.product_content{ 
+  height: 100px;
+  align-items: center;
+  display: flex;
+}
+
+.prodct_price_cart{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.addcart{
+  text-align: right;
+}
+
+
+.product_detail_title h2{
+  text-align: center;
+}
+.row{
+  width: 100%;
+}
+.productInfoImage{
+  width: 100%;
+  object-fit: contain;
+  height: 400px;
+}
+
+.productCard{
+  padding: 3%;
+}
+
+.productCardRow{
+  border: 2px solid #ede9f1;
+    border-radius: 12px;
+    margin: 0;
+}
+.productInfoImagCol {
+  padding: 5px;
+}
+
+
+.productInfoTitle{
+  position: relative;
+}
+.prodInfoTitle{
+    background-color: #53268d;
+    position: absolute;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.productInfoCat{
+  margin-top: 8%;
+}
+.productInfoCat>p{
+  color: #53268d;
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+
+.productInfoPrice>P{
+  background-color: #53268d;
+  position: absolute;
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+}
+
+.productInfoDesc>p{
+  color: #53268d;
+}
+
+.product_detail_title{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.productInfoCol {
+    padding-top: 2%;
+    padding-left: 2%;
+    border-left: 2px solid #ede9f1;
+}
+
+
+
+
+
+

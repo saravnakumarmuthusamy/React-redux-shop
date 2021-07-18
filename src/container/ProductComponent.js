@@ -7,23 +7,24 @@ function ProductComponent() {
     const products = useSelector(state => state.allProducts.products);
 
     const renderProduct=products.map((product)=>{
-        const { id,title,price,catagory,image } = product;
+        const { id,title,price,image } = product;
         return (
-            <div className="four wide column" key={id}>
-                <Link path={`/product/${id}`}>
-                <div className="ui link cards">
-                    <div className="card">
-                        <div className="image">
-                            <img src={image} alt={title} />
+            <div className="productCol" key={id}>
+                <div className="product_card">
+                         <Link to={`/product/${id}`} >
+                        <div className="product_image">
+                            <img className="product_img" src={image} alt={title} />
                         </div>
-                        <div className="content">
-                            <div className="header">{title}</div>
-                            <div className="meta price">{price}</div>
-                            <div className="meta">{catagory}</div>
+                        <div className="product_content">
+                            <div className="prodct_title"><p>{title}</p></div>
                         </div>
-                    </div>
-                </div>
-            </Link>
+                        </Link>
+                        <div className="prodct_price_cart row">
+                           <div className="pricetag col">
+                                <span className="">${price}</span></div>
+                           <div className="addcart col"><button className="btn btn-primary">Add Cart</button></div>
+                        </div>
+            </div>
             </div>
             )
     });

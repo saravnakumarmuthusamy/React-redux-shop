@@ -7,12 +7,12 @@ const setProducts=(data)=>{
     }
 }
 
-// const selectedProduct=(product)=>{
-//     return {
-//         type:ActionType.SELECTED_PRODUCT,
-//         payload:product
-//     }
-// }
+const selectedProduct=(product)=>{
+    return {
+        type:ActionType.SELECTED_PRODUCT,
+        payload:product
+    }
+}
 
 // const removeSelectedProduct=(product)=>{
 //     return {
@@ -22,4 +22,4 @@ const setProducts=(data)=>{
 // }
 
 
-export default setProducts;
+export { setProducts,selectedProduct};
